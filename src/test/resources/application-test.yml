@@ -1,0 +1,6 @@
+
+
+# Log config
+logging:
+  level:
+    ROOT: INFO
