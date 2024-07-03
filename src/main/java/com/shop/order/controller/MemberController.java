@@ -8,8 +8,6 @@ import com.shop.order.service.MemberService;
 import com.shop.order.service.OrderService;
 import com.shop.order.vo.PagingVo;
 import com.shop.order.vo.ResponseVo;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +16,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
-@Api(value = "desc of class")
 @Slf4j
 @RequestMapping("/v1/member")
 @RestController
@@ -35,7 +32,6 @@ public class MemberController {
      * @param condition 查詢條件
      * @return 會員資訊
      */
-    @ApiOperation(value = "desc of method", notes = "")
     @GetMapping(value = "")
     public PagingVo<MemberDto> getMembers(@Valid @ModelAttribute  MemberQueryVo condition) {
 
