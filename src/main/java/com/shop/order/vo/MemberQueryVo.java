@@ -2,6 +2,7 @@ package com.shop.order.vo;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.annotation.Nulls;
+import com.shop.order.enums.MemberLevel;
 import lombok.Data;
 
 /**
@@ -37,4 +38,6 @@ public class MemberQueryVo {
      */
     @JsonSetter(nulls = Nulls.SKIP)
     private Integer size = 20;
+
+    private MemberLevel memberLevel;
 }

@@ -33,7 +33,7 @@ public class MemberController {
      * @return 會員資訊
      */
     @GetMapping(value = "")
-    public PagingVo<MemberDto> getMembers(@Valid @ModelAttribute  MemberQueryVo condition) {
+    public PagingVo<MemberDto> getMembers(@Valid @RequestBody  MemberQueryVo condition) {
 
         PagingVo<MemberDto> members = memberService.query(condition);
         return members;
